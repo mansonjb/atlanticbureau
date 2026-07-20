@@ -1,10 +1,8 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import Header from "@/components/Header";
 import LogoMarquee from "@/components/LogoMarquee";
 import Stats from "@/components/Stats";
 import Faq from "@/components/Faq";
-import CookieBanner from "@/components/CookieBanner";
 import Reveal from "@/components/Reveal";
 import { solutions, projets, etapes, secteurs, avis, zones, reassurance, clients } from "@/lib/data";
 
@@ -43,8 +41,6 @@ function Head({
 export default function Home() {
   return (
     <main style={{ fontFamily: "Instrument Sans,system-ui,sans-serif", color: "#1F2933", lineHeight: 1.55, overflowX: "hidden" }}>
-      <Header />
-
       {/* ======= HERO ======= */}
       <section id="top" style={{ position: "relative", background: "#F5F2EC", color: "#1F2933", overflow: "hidden" }}>
         <div className="ab-blueprint" aria-hidden style={{ position: "absolute", inset: 0, pointerEvents: "none" }} />
@@ -72,7 +68,7 @@ export default function Home() {
               On vous accompagne à chaque étape : écoute de vos besoins, conseil sur mesure, plans 2D et 3D, mobilier et installation par nos équipes. Un interlocuteur unique, de la première idée au dernier fauteuil.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
-              <a href="#contact" className="btn btn-primary" style={{ fontSize: 16, padding: "16px 28px" }}>Demander un devis <span aria-hidden>→</span></a>
+              <a href="/contact" className="btn btn-primary" style={{ fontSize: 16, padding: "16px 28px" }}>Demander un devis <span aria-hidden>→</span></a>
               <a href="#realisations" className="btn btn-outline" style={{ fontSize: 16, padding: "16px 28px" }}>Voir nos réalisations</a>
             </div>
           </Reveal>
@@ -120,7 +116,7 @@ export default function Home() {
             <h2 style={{ ...h2Base, fontSize: "clamp(28px,3.6vw,40px)", color: "#0F3D4C", margin: "12px 0 0" }}>Une entreprise qui vous conseille, pas seulement un fournisseur.</h2>
             <p style={{ ...leadBase, color: "#425466", margin: "18px 0 0" }}>Avant de parler mobilier, on parle de vous : vos équipes, vos usages, votre budget et votre planning. Notre métier, c&apos;est de traduire tout ça en un espace qui a du sens, et reste à vos côtés jusqu&apos;à ce que la dernière chaise soit en place.</p>
             <p style={{ ...leadBase, color: "#425466", margin: "14px 0 0" }}>Basés à Aytré, près de La Rochelle, nous accompagnons les entreprises, collectivités et professionnels de la région. Un seul interlocuteur suit votre projet du début à la fin : pas d&apos;intermédiaire, pas de sous-traitance sur la pose.</p>
-            <a href="#contact" className="btn link-arrow" style={{ marginTop: 24, color: "#E8772E", fontWeight: 600, padding: 0 }}>Parler de votre projet <span className="arw" aria-hidden>→</span></a>
+            <a href="/contact" className="btn link-arrow" style={{ marginTop: 24, color: "#E8772E", fontWeight: 600, padding: 0 }}>Parler de votre projet <span className="arw" aria-hidden>→</span></a>
           </Reveal>
           <Reveal delay={80}>
             <div data-role="approche-cards" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 16 }}>
@@ -263,7 +259,7 @@ export default function Home() {
               </div>
               <a href="https://maps.google.com/?q=Rue+de+Bougainville+17440+Aytré" target="_blank" rel="noopener" style={{ position: "absolute", right: 12, bottom: 12, background: "#fff", color: "#0F3D4C", fontWeight: 600, fontSize: 12, padding: "8px 13px", borderRadius: 8, boxShadow: "0 3px 10px rgba(0,0,0,0.12)" }}>Ouvrir dans Maps →</a>
             </div>
-            <a href="#contact" className="btn btn-primary" style={{ marginTop: 20, fontSize: 16, padding: "15px 26px" }}>Prendre rendez-vous <span aria-hidden>→</span></a>
+            <a href="/contact" className="btn btn-primary" style={{ marginTop: 20, fontSize: 16, padding: "15px 26px" }}>Prendre rendez-vous <span aria-hidden>→</span></a>
           </div>
         </div>
       </section>
@@ -328,46 +324,12 @@ export default function Home() {
           <h2 style={{ ...h2Base, fontSize: "clamp(32px,4.5vw,48px)", letterSpacing: "-1.2px", margin: 0, textWrap: "balance" }}>Un projet d&apos;aménagement ? Parlons-en.</h2>
           <p style={{ fontSize: 18, color: "#bcd4dc", margin: "18px 0 0" }}>Réponse sous 48h, conseil personnalisé et devis gratuit sans engagement.</p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14, marginTop: 32 }}>
-            <a href="mailto:contact@atlantic-bureau.com" className="btn btn-primary" style={{ fontSize: 16, padding: "16px 28px" }}>Demander un devis gratuit <span aria-hidden>→</span></a>
+            <a href="/contact" className="btn btn-primary" style={{ fontSize: 16, padding: "16px 28px" }}>Demander un devis gratuit <span aria-hidden>→</span></a>
             <a href="tel:0546566680" className="btn btn-ghost" style={{ fontSize: 16, padding: "16px 28px" }}>☎ 05 46 56 66 80</a>
           </div>
         </div>
       </section>
 
-      {/* ======= FOOTER ======= */}
-      <footer style={{ background: "#0b2f3b", color: "#c5d3d9", padding: "60px 0 28px" }}>
-        <div data-role="footer-grid" style={{ ...wrap, display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 40 }}>
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff" }}>
-              <span style={{ width: 38, height: 38, borderRadius: 10, background: "#E8772E", color: "#fff", fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>ab</span>
-              <span style={{ fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 18 }}>Atlantic Bureau</span>
-            </div>
-            <p style={{ fontSize: 14, lineHeight: 1.7, margin: "18px 0 0" }}>
-              ZAC de Belle-Aire Nord<br />Rue de Bougainville, 17440 Aytré<br />
-              <a href="tel:0546566680" style={{ color: "#7ec4d4" }}>05 46 56 66 80</a><br />
-              <a href="mailto:contact@atlantic-bureau.com" style={{ color: "#7ec4d4" }}>contact@atlantic-bureau.com</a>
-            </p>
-            <p style={{ fontSize: 14, lineHeight: 1.6, margin: "14px 0 0", color: "#8fa4ac" }}>Lun-Ven · 8h30-12h / 14h-18h</p>
-          </div>
-          {[
-            ["Plan du site", [["Solutions", "#solutions"], ["Réalisations", "#realisations"], ["Secteurs", "#secteurs"], ["Showroom", "#showroom"]]],
-            ["Réseaux", [["LinkedIn", "#"], ["Instagram", "#"], ["Facebook", "#"]]],
-            ["Légal", [["Mentions légales", "#"], ["Politique de confidentialité", "#"], ["Cookies", "#"]]],
-          ].map(([title, links]) => (
-            <div key={title as string}>
-              <h4 style={{ fontFamily: "Hanken Grotesk,sans-serif", color: "#fff", fontSize: 14, letterSpacing: "0.5px", textTransform: "uppercase", margin: "0 0 14px" }}>{title as string}</h4>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 9, fontSize: 14 }}>
-                {(links as [string, string][]).map(([l, h]) => (
-                  <li key={l}><a href={h} style={{ color: "#c5d3d9" }}>{l}</a></li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div style={{ ...wrap, margin: "32px auto 0", padding: "20px 24px 0", borderTop: "1px solid #ffffff1a", fontSize: 13, color: "#8fa4ac" }}>© 2026 Atlantic Bureau · Aménagement d&apos;espaces de travail. Tous droits réservés.</div>
-      </footer>
-
-      <CookieBanner />
     </main>
   );
 }

@@ -2,11 +2,11 @@
 import { useState } from "react";
 
 const nav: [string, string][] = [
-  ["#solutions", "Solutions"],
-  ["#realisations", "Réalisations"],
-  ["#secteurs", "Secteurs"],
-  ["#showroom", "Showroom"],
-  ["#contact", "Contact"],
+  ["/#solutions", "Solutions"],
+  ["/#realisations", "Réalisations"],
+  ["/#secteurs", "Secteurs"],
+  ["/#showroom", "Showroom"],
+  ["/contact", "Contact"],
 ];
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
       }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "14px 24px", display: "flex", alignItems: "center", gap: 24 }}>
-        <a href="#top" style={{ display: "flex", alignItems: "center", gap: 11, color: "#0F3D4C" }}>
+        <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, color: "#0F3D4C" }}>
           <span style={{ width: 40, height: 40, borderRadius: 10, background: "#0F3D4C", color: "#fff", fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 19, display: "flex", alignItems: "center", justifyContent: "center", letterSpacing: "-0.5px" }}>ab</span>
           <span style={{ fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.3px", color: "#0F3D4C" }}>Atlantic Bureau</span>
         </a>
@@ -35,7 +35,7 @@ export default function Header() {
         </nav>
         <div data-role="header-actions" style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <a href="tel:0546566680" data-role="header-phone" style={{ fontWeight: 600, fontSize: 15, color: "#0F3D4C", whiteSpace: "nowrap" }}>05 46 56 66 80</a>
-          <a href="#contact" className="btn btn-primary" style={{ fontSize: 15, padding: "11px 20px" }}>Devis gratuit <span aria-hidden>→</span></a>
+          <a href="/contact" className="btn btn-primary" style={{ fontSize: 15, padding: "11px 20px" }}>Devis gratuit <span aria-hidden>→</span></a>
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Ouvrir le menu"

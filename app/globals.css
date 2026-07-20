@@ -78,6 +78,10 @@ img{display:block;max-width:100%;}
   [data-role="stats-grid"]{grid-template-columns:repeat(2,1fr) !important;}
   [data-role="footer-grid"]{grid-template-columns:1fr !important;}
 }
+@media(max-width:720px){
+  .df-row{grid-template-columns:1fr !important;}
+  .contact-grid{grid-template-columns:1fr !important;}
+}
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none;}
   .ab-marquee-track{animation:none;}
