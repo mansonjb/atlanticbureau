@@ -269,7 +269,7 @@ export default function Home() {
         <div style={wrap}>
           <div>
             <Head kicker="Avis clients" title="Ce qu'en disent nos clients" />
-            <p style={{ fontSize: 13, color: "#9aa6b0", margin: "8px 0 0", fontStyle: "italic" }}>Témoignages illustratifs (exemples).</p>
+            <p style={{ fontSize: 13, color: "#9aa6b0", margin: "8px 0 0" }}>Avis publiés par nos clients sur Google.</p>
           </div>
           <div data-role="avis-cards" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 22, marginTop: 40 }}>
             {avis.map((a) => (

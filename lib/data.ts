@@ -111,32 +111,42 @@ export const secteurs: Secteur[] = [
 export type Avis = { initials: string; name: string; role: string; quote: string };
 export const avis: Avis[] = [
   {
-    initials: "ML",
-    name: "Marie Lefèvre",
-    role: "DG, PME tertiaire · La Rochelle",
+    initials: "PP",
+    name: "Pierre-Antoine Potage",
+    role: "Avis Google",
     quote:
-      "Du premier rendez-vous à la pose, tout a été fluide. Les plans 3D nous ont vraiment aidés à nous projeter.",
+      "Commercial très à l'écoute ! Il a su prendre le temps de me conseiller. Délai de livraison : promesse tenue. Qualité professionnelle irréprochable.",
   },
   {
-    initials: "TP",
-    name: "Thomas Perrin",
-    role: "Responsable services généraux · Niort",
+    initials: "TB",
+    name: "Thomas Balange",
+    role: "Avis Google",
     quote:
-      "Une équipe à l'écoute et des délais tenus. Nos collaborateurs adorent le nouvel espace détente.",
+      "Acquisition de mon bureau il y a quelques années, puis de tables pour nos prestations événementielles. Moralité : je suis bien assis, et on fait nos prestations comme jamais. Sans parler de l'extrême gentillesse de Christelle, Yannick et toute l'équipe.",
   },
   {
-    initials: "SB",
-    name: "Sophie Bernard",
-    role: "Directrice, collectivité · Royan",
-    quote:
-      "Accompagnement sérieux sur un marché public, et un showroom qui fait la différence.",
+    initials: "EA",
+    name: "EURL Arnault",
+    role: "Local Guide · Google",
+    quote: "Une équipe de choc ! Difficile de trouver mieux, bravo et merci.",
   },
   {
-    initials: "JD",
-    name: "Julien Doré",
-    role: "Gérant, cabinet dentaire · Rochefort",
-    quote:
-      "Espace repensé de A à Z, pose impeccable et zéro mauvaise surprise sur le devis. On recommande.",
+    initials: "AD",
+    name: "Antoine Després",
+    role: "Local Guide · Google",
+    quote: "Des conseils, de la qualité et un service impeccable !",
+  },
+  {
+    initials: "RM",
+    name: "Ralph Mobel",
+    role: "Local Guide · Google",
+    quote: "Une véritable équipe de professionnels. Bravo !",
+  },
+  {
+    initials: "TC",
+    name: "Tito C.",
+    role: "Local Guide · Google",
+    quote: "Grand choix de sièges de bureau, de qualité.",
   },
 ];
 

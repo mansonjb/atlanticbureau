@@ -14,7 +14,10 @@ export default function Footer() {
       <div data-role="footer-grid" style={{ ...wrap, display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 40 }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff" }}>
-            <span style={{ width: 38, height: 38, borderRadius: 10, background: "#E8772E", color: "#fff", fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>ab</span>
+            <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#fff", borderRadius: 9, padding: "6px 9px", height: 38 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-ab.png" alt="" style={{ height: 22, width: "auto" }} />
+            </span>
             <span style={{ fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 18 }}>Atlantic Bureau</span>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.7, margin: "18px 0 0" }}>

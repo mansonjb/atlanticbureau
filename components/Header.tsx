@@ -25,7 +25,8 @@ export default function Header() {
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "14px 24px", display: "flex", alignItems: "center", gap: 24 }}>
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, color: "#0F3D4C" }}>
-          <span style={{ width: 40, height: 40, borderRadius: 10, background: "#0F3D4C", color: "#fff", fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 19, display: "flex", alignItems: "center", justifyContent: "center", letterSpacing: "-0.5px" }}>ab</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-ab.png" alt="" style={{ height: 36, width: "auto" }} />
           <span style={{ fontFamily: "Hanken Grotesk,sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.3px", color: "#0F3D4C" }}>Atlantic Bureau</span>
         </a>
         <nav data-role="desktop-nav" style={{ display: "flex", gap: 26, marginLeft: "auto", fontWeight: 500, fontSize: 15 }}>
